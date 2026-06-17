@@ -1,0 +1,28 @@
+# Node Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python Virtual Environments
+.venv/
+venv/
+backend/.venv/
+backend/venv/
+
+# Next.js Build Output
+frontend/.next/
+frontend/out/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# CRITICAL: Environment Variables (Never push API keys!)
+.env
+.env.local
+*.env   

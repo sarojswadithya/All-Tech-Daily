@@ -1,0 +1,12 @@
+requests
+fastapi
+uvicorn
+beautifulsoup4
+deep-translator
+groq
+python-dotenv
+supabase
+slowapi
+reportlab
+pydantic
+stripe

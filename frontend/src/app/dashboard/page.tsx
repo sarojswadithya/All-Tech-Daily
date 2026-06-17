@@ -157,7 +157,7 @@ export default function Dashboard() {
                 disabled={checkoutLoading}
                 className="w-full py-4 bg-transparent text-black text-xs font-bold uppercase tracking-widest border-2 border-black hover:bg-black hover:text-white transition-all disabled:opacity-50"
               >
-                {checkoutLoading ? 'Connecting to Stripe...' : 'Upgrade to Creator — $9/mo'}
+                {checkoutLoading ? 'Connecting to Stripe...' : 'Upgrade to Creator — ₹49/mo'}
               </button>
             )}
           </div>

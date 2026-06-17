@@ -117,7 +117,7 @@ export default function LandingPage() {
 
             <div className="border-4 border-double border-black p-8 bg-black text-[#F9F7F1]">
               <h3 className="text-2xl font-black mb-2">The Creator</h3>
-              <p className="text-4xl font-black mb-6">$9<span className="text-sm font-normal italic text-gray-400"> / month</span></p>
+              <p className="text-4xl font-black mb-6">₹49<span className="text-sm font-normal italic text-gray-400"> / month</span></p>
               <ul className="space-y-4 mb-8 text-sm font-medium">
                 <li className="flex items-center gap-2">★ Everything in The Reader</li>
                 <li className="flex items-center gap-2">★ Full Daily Podcast Mixing</li>

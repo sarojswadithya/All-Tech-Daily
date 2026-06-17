@@ -501,15 +501,7 @@ async def create_checkout_session(req: CheckoutRequest):
             payment_method_types=['card'],
             line_items=[
                 {
-                    'price_data': {
-                        'currency': 'usd',
-                        'unit_amount': 900, 
-                        'recurring': {'interval': 'month'},
-                        'product_data': {
-                            'name': 'The Creator Tier - All Tech Daily',
-                            'description': 'Unlock PDF Digest exports and AI Director Scripts.',
-                        },
-                    },
+                    'price': 'price_1TjMKtLENVY7hCnyGamouKED', 
                     'quantity': 1,
                 },
             ],

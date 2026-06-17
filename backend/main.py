@@ -62,6 +62,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def root():
+    return {"status": "online", "message": "All Tech Daily API is running. The presses are hot!"}
+
 # --- MODELS ---
 class NewsItem(BaseModel):
     id: int

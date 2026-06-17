@@ -494,7 +494,7 @@ async def generate_pdf(request: Request, req: PDFRequest):
 
 @app.post("/api/create-checkout-session")
 async def create_checkout_session(req: CheckoutRequest):
-    domain_url = "http://localhost:3000" 
+    domain_url = "https://all-tech-daily.vercel.app" 
     try:
         checkout_session = stripe.checkout.Session.create(
             customer_email=req.email,
@@ -524,7 +524,7 @@ async def create_checkout_session(req: CheckoutRequest):
     
 @app.post("/api/create-portal-session")
 async def create_portal_session(req: CheckoutRequest):
-    domain_url = "http://localhost:3000/dashboard" 
+    domain_url = "https://all-tech-daily.vercel.app/dashboard" 
     try:
         customers = stripe.Customer.list(email=req.email, limit=1)
         if not customers.data:

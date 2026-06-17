@@ -113,7 +113,7 @@ export default function Home() {
     setVisibleCount(10); 
     
     try {
-      const res = await fetch(`https://all-tech-backend.onrender.com/api/news?lang=${lang}&sources=${selectedSources.join(',')}`);      
+      const res = await fetch(`https://all-tech-daily.onrender.com/api/news?lang=${lang}&sources=${selectedSources.join(',')}`);      
       if (!res.ok) throw new Error('Failed to fetch news from backend');
       const data = await res.json();
       
@@ -135,14 +135,14 @@ export default function Home() {
     setTranslatedCards(prev => ({ ...prev, [id]: { ...prev[id], loading: true } }));
 
     try {
-      const resHead = await fetch('https://all-tech-backend.onrender.com/api/translate', {
+      const resHead = await fetch('https://all-tech-daily.onrender.com/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: currentHeadline, target_lang: targetLang })
       });
       const headData = await resHead.json();
 
-      const resSumm = await fetch('https://all-tech-backend.onrender.com/api/translate', {
+      const resSumm = await fetch('https://all-tech-daily.onrender.com/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: currentSummary, target_lang: targetLang })
@@ -175,7 +175,7 @@ export default function Home() {
 
     setScripts(prev => ({ ...prev, [id]: { text: '', loading: true, visible: true } }));
     try {
-      const res = await fetch('https://all-tech-backend.onrender.com/api/script', {
+      const res = await fetch('https://all-tech-daily.onrender.com/api/script', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ headline, summary })
@@ -212,7 +212,7 @@ export default function Home() {
     setPlayingId(id);
 
     try {
-      const response = await fetch('https://all-tech-backend.onrender.com/api/audio', {
+      const response = await fetch('https://all-tech-daily.onrender.com/api/audio', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: textToRead, lang: playbackLang }),
@@ -251,7 +251,7 @@ export default function Home() {
 
     try {
       // 1. Send the current news array to the Python backend
-      const response = await fetch('https://all-tech-backend.onrender.com/api/pdf', {
+      const response = await fetch('https://all-tech-daily.onrender.com/api/pdf', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ export default function Home() {
     // 2. If no audio is loaded yet, fetch it from the server
     setPodcastLoading(true);
     try {
-      const response = await fetch('https://all-tech-backend.onrender.com/api/podcast', {
+      const response = await fetch('https://all-tech-daily.onrender.com/api/podcast', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ articles: news, language: lang }),

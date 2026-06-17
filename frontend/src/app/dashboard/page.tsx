@@ -51,7 +51,7 @@ export default function Dashboard() {
     setCheckoutLoading(true);
     
     try {
-      const res = await fetch('https://all-tech-backend.onrender.com/api/create-checkout-session', {
+      const res = await fetch('https://all-tech-daily.onrender.com/api/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email }),
@@ -78,7 +78,7 @@ export default function Dashboard() {
     setPortalLoading(true);
     
     try {
-      const res = await fetch('https://all-tech-backend.onrender.com/api/create-portal-session', {
+      const res = await fetch('https://all-tech-daily.onrender.com/api/create-portal-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email }),

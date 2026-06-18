@@ -146,7 +146,7 @@ async def process_single_article(data, lang):
         source_name = data['source']
         url = data.get('url', '#')
         
-        await asyncio.sleep(0.5) 
+        await asyncio.sleep(1.0) 
         summary = await generate_summary(headline, lang)
         
         if lang != "en":
